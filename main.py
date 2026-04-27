@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"health": "ok"}
 
 @app.post("/histolog/ai/query")
 async def query(query: str):
