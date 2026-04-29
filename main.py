@@ -18,10 +18,6 @@ async def query(request: MessageRequest):
 
     return {"query": query, "answer": answer}
 
-@app.post("/histolog/ai/test")
-async def test(request: MessageRequest):
-    return {"message": request.message}
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
