@@ -1,0 +1,11 @@
+services:
+  histolog-ai:
+    build: .
+    ports:
+      - "8000:8000"
+    networks:
+      - shared-network
+
+networks:
+  shared-network:
+    external: true
