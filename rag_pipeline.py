@@ -126,7 +126,7 @@ def generate_answer(prompt):
 
     print("[DEBUG] =========================\n")
 
-    return result.strip()
+    return result.strip(), usage.total_token_count
 
 # =========================
 # 7. 전체 파이프라인
