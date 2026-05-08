@@ -16,7 +16,7 @@ async def root():
 async def query(request: MessageRequest):
     answer = rag_pipeline.ask(request.message)
 
-    return {"query": query, "answer": answer}
+    return {"query": query, "answer": answer[0], "usage": answer[1]}
 
 if __name__ == "__main__":
     import uvicorn
